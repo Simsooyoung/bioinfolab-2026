@@ -39,3 +39,9 @@ Run `bash .devcontainer/check.sh` to see which tools this environment has. Outsi
 ## Workflow
 
 At the end of each lab the student commits and pushes (`git add . && git commit -m "labNN 완료" && git push`). Commit messages are short Korean notes.
+
+## 규칙
+- FASTA 파일은 fasta.py 함수를 사용한다
+- 새 라이브러리를 쓰기 전에 허용 여부를 묻는다
+- 하지 말아야 할 명령어: `rm -rf`, `chmod 777`
+- 커밋 전에 반드시 `git status` 로 변경 파일을 확인한다
