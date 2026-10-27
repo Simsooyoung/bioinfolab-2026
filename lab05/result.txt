@@ -1,0 +1,4 @@
+data/seqs.fasta
+3
+data/seqs2.fasta
+3
