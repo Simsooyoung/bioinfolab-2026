@@ -1,0 +1,6 @@
+--2026-11-03 04:03:14--  https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore
+Resolving eutils.ncbi.nlm.nih.gov (eutils.ncbi.nlm.nih.gov)... 34.107.134.59, 2600:1901:0:c831::
+Connecting to eutils.ncbi.nlm.nih.gov (eutils.ncbi.nlm.nih.gov)|34.107.134.59|:443... connected.
+HTTP request sent, awaiting response... 400 Bad Request
+2026-11-03 04:03:15 ERROR 400: Bad Request.
+

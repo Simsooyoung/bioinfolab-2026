@@ -22,22 +22,8 @@ def gc_content(seq):
         return 0.0
     gc = seq.count("G") + seq.count("C")
     return gc / len(seq)
- 
- 
-if __name__ == "__main__":
-    import sys
-    seqs = read_fasta(sys.argv[1])
-    for name in seqs:
-        print(name, len(seqs[name]), round(gc_content(seqs[name]), 3))
-    
-     # reverse_complement 검증
-    for name in seqs:
-        seq = seqs[name]
-        if reverse_complement(reverse_complement(seq)) == seq:
-            print(name, "OK")
-        else:
-            print(name, "FAIL")
 
+ 
 def write_fasta(seqs, filename):
     """{이름: 서열} 딕셔너리를 FASTA 파일로 저장한다."""
     with open(filename, "w") as out:
@@ -64,3 +50,17 @@ def length_stats(seqs):
         "max": max(lengths),
     }
     
+ 
+if __name__ == "__main__":
+    import sys
+    seqs = read_fasta(sys.argv[1])
+    for name in seqs:
+        print(name, len(seqs[name]), round(gc_content(seqs[name]), 3))
+    
+     # reverse_complement 검증
+    for name in seqs:
+        seq = seqs[name]
+        if reverse_complement(reverse_complement(seq)) == seq:
+            print(name, "OK")
+        else:
+            print(name, "FAIL")
