@@ -2,7 +2,9 @@
 
 `lab11/src/qual_by_position.py`는 FASTQ 파일을 읽어 **read 위치(1번째 염기, 2번째 염기, …)별 평균 품질 점수(Phred)**를 출력하는 스크립트이다. 표준 라이브러리(`sys`)만 사용한다. FASTQ를 읽는 `read_fastq` 함수는 `parse_fastq.py`, `qual_summary.py`의 것과 같다.
 
-`qual_summary.py`가 파일 전체의 평균 품질을 숫자 하나로 보여준다면, 이 스크립트는 read의 **어느 위치에서 품질이 떨어지는지** 보여준다. FastQC 보고서의 "Per base sequence quality" 그래프와 같은 정보를 표로 계산한 것이다.
+`qual_summary.py`가 파일 전체의 평균 품질을 숫자 하나로 보여준다면, 이 스크립트는 read의 **어느 위치에서 품질이 떨어지는지** 보여준다.
+
+FASTQ 파일의 모든 read에서 같은 위치(1번째 염기, 2번째 염기, …)의 품질 점수를 모아 위치별 평균을 계산하고, 위치와 평균 품질을 탭으로 구분하여 출력한다(그 위치의 염기 개수 `count`도 함께 출력한다). 이것이 FastQC의 Per base sequence quality 그래프가 계산하는 것과 같은 값이다.
 
 ## 1. 사용법
 
